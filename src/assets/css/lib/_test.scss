@@ -1,0 +1,9 @@
+.home {
+  background: $primary-color;
+}
+
+img {
+  .home & {
+    display: none;
+  }
+}

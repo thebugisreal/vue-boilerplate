@@ -16,3 +16,8 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.home {
+  font-size: $font-size;
+}
+</style>
