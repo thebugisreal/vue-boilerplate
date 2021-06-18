@@ -9,6 +9,13 @@ const state = () => ({
 // getters
 const getters = {}
 
+// mutations
+const mutations = {
+  setProducts (state, products) {
+    state.data = products
+  }
+}
+
 // actions
 const actions = {
   async getAllProducts ({ commit }, first) {
@@ -20,17 +27,10 @@ const actions = {
   }
 }
 
-// mutations
-const mutations = {
-  setProducts (state, products) {
-    state.data = products
-  }
-}
-
 export default {
   namespaced: true,
   state,
   getters,
-  actions,
-  mutations
+  mutations,
+  actions
 }

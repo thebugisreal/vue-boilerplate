@@ -9,6 +9,13 @@ const state = () => ({
 // getters
 const getters = {}
 
+// mutations
+const mutations = {
+  setCollections (state, collections) {
+    state.data = collections
+  }
+}
+
 // actions
 const actions = {
   async getAllCollections ({ commit }, first) {
@@ -20,17 +27,10 @@ const actions = {
   }
 }
 
-// mutations
-const mutations = {
-  setCollections (state, collections) {
-    state.data = collections
-  }
-}
-
 export default {
   namespaced: true,
   state,
   getters,
-  actions,
-  mutations
+  mutations,
+  actions
 }

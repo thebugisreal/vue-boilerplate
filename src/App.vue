@@ -5,8 +5,33 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <section class="hero">
+        <h1 class="title">{{ count }}</h1>
+        <h2 v-if="isEven">Is even!!</h2>
+    </section>
+    <section>
+      <button class="button" @click="increment">+</button>
+      <button class="button" @click="decrement">-</button>
+      <button class="button" @click="reset">Reset</button>
+    </section>
   </div>
 </template>
+
+<script>
+import { mapActions, mapGetters, mapState } from 'vuex'
+
+export default {
+  computed: {
+    ...mapState('storage', ['count']),
+    ...mapGetters('storage', ['isEven'])
+  },
+  methods: {
+    ...mapActions('storage', [
+      'increment', 'decrement', 'reset'
+    ])
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
