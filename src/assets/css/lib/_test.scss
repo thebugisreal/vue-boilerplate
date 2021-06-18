@@ -1,5 +1,12 @@
 .home {
   background: $primary-color;
+  @media (--s) {
+    background: white;
+  }
+
+  @media (--m) {
+    background: gray;
+  }
 }
 
 img {

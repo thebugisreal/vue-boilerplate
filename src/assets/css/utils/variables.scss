@@ -1,2 +1,5 @@
 $primary-color: #fff000;
 $font-size: 10em;
+
+@custom-media --s (min-width: 768px);
+@custom-media --m (min-width: 1000px);
